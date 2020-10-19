@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block usd_button %}ltc_usd(){% endblock %}
+{% block eur_button %}ltc_eur(){% endblock %}
+{% block brl_button %}ltc_brl(){% endblock %}
+{% block jpy_button %}ltc_jpy(){% endblock %}
+{% block content %}
+    <script>
+        function ltc_usd() {
+            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[8]['value']}} {{currency_data[8]['symbol2']}}";
+        }
+
+        function ltc_eur() {
+            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[10]['value']}} {{currency_data[10]['symbol2']}}";
+        }
+
+        function ltc_brl() {
+            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[9]['value']}} {{currency_data[9]['symbol2']}}";
+        }
+
+        function ltc_jpy() {
+            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[11]['value']}} {{currency_data[11]['symbol2']}}";
+        }
+
+    </script>
+
+    <div id="currency_response"> 1 BTC = </div>
+
+{% endblock %}

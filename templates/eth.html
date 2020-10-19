@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block usd_button %}eth_usd(){% endblock %}
+{% block eur_button %}eth_eur(){% endblock %}
+{% block brl_button %}eth_brl(){% endblock %}
+{% block jpy_button %}eth_jpy(){% endblock %}
+{% block content %}
+    <script>
+        function eth_usd() {
+            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[4]['value']}} {{currency_data[4]['symbol2']}}";
+        }
+
+        function eth_eur() {
+            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[6]['value']}} {{currency_data[6]['symbol2']}}";
+        }
+
+        function eth_brl() {
+            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[5]['value']}} {{currency_data[5]['symbol2']}}";
+        }
+
+        function eth_jpy() {
+            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[7]['value']}} {{currency_data[7]['symbol2']}}";
+        }
+
+    </script>
+
+    <div id="currency_response"> 1 BTC = </div>
+
+{% endblock %}

@@ -37,7 +37,7 @@ def get_symbol2_by():
     return currency2_symbols
 
 @app.route('/')
-def index():
+def base():
 
     url = "https://min-api.cryptocompare.com/data/price?fsym={}&tsyms={}"
     currencies = get_symbol_by()
@@ -59,6 +59,107 @@ def index():
         
     
     print(Currency.symbol)
-    return render_template('index.html', currency_data = exchange_data)
+    return render_template('base.html', currency_data = exchange_data)
+
+@app.route('/bitcoin/')
+def btc():
+
+    url = "https://min-api.cryptocompare.com/data/price?fsym={}&tsyms={}"
+    currencies = get_symbol_by()
+    currencies2 = get_symbol2_by()
+    exchange_data = [] 
+
+    for currency in currencies:
+        for currency2 in currencies2:
+            r = requests.get(url.format(currency, currency2), headers={"Apikey": "a20bdd3b9112fef067edf5b314003ec6d508867b28e3958f0ac30d34f0e6a0c8"})
+            response = r.json()                  
+
+            exchange = {
+                'symbol' : currency,
+                'value' : response[currency2],
+                'symbol2' : currency2,
+            }
+
+            exchange_data.append(exchange)
+        
+    
+    print(Currency.symbol)
+    return render_template('btc.html', currency_data = exchange_data)
+
+@app.route('/ethereum/')
+def eth():
+
+    url = "https://min-api.cryptocompare.com/data/price?fsym={}&tsyms={}"
+    currencies = get_symbol_by()
+    currencies2 = get_symbol2_by()
+    exchange_data = [] 
+
+    for currency in currencies:
+        for currency2 in currencies2:
+            r = requests.get(url.format(currency, currency2), headers={"Apikey": "a20bdd3b9112fef067edf5b314003ec6d508867b28e3958f0ac30d34f0e6a0c8"})
+            response = r.json()                  
+
+            exchange = {
+                'symbol' : currency,
+                'value' : response[currency2],
+                'symbol2' : currency2,
+            }
+
+            exchange_data.append(exchange)
+        
+    
+    print(Currency.symbol)
+    return render_template('eth.html', currency_data = exchange_data)
+
+@app.route('/litecoin/')
+def ltc():
+
+    url = "https://min-api.cryptocompare.com/data/price?fsym={}&tsyms={}"
+    currencies = get_symbol_by()
+    currencies2 = get_symbol2_by()
+    exchange_data = [] 
+
+    for currency in currencies:
+        for currency2 in currencies2:
+            r = requests.get(url.format(currency, currency2), headers={"Apikey": "a20bdd3b9112fef067edf5b314003ec6d508867b28e3958f0ac30d34f0e6a0c8"})
+            response = r.json()                  
+
+            exchange = {
+                'symbol' : currency,
+                'value' : response[currency2],
+                'symbol2' : currency2,
+            }
+
+            exchange_data.append(exchange)
+        
+    
+    print(Currency.symbol)
+    return render_template('ltc.html', currency_data = exchange_data)
+
+@app.route('/ripple/')
+def xpr():
+
+    url = "https://min-api.cryptocompare.com/data/price?fsym={}&tsyms={}"
+    currencies = get_symbol_by()
+    currencies2 = get_symbol2_by()
+    exchange_data = [] 
+
+    for currency in currencies:
+        for currency2 in currencies2:
+            r = requests.get(url.format(currency, currency2), headers={"Apikey": "a20bdd3b9112fef067edf5b314003ec6d508867b28e3958f0ac30d34f0e6a0c8"})
+            response = r.json()                  
+
+            exchange = {
+                'symbol' : currency,
+                'value' : response[currency2],
+                'symbol2' : currency2,
+            }
+
+            exchange_data.append(exchange)
+        
+    
+    print(Currency.symbol)
+    return render_template('xpr.html', currency_data = exchange_data)
+
 if __name__ == "__main__":
     app.run(debug=True)

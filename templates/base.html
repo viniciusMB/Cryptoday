@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css')}}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inicial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Cryptoday</title>
+</head>
+
+<body class="body">
+    <nav class="nav">
+        <div class="logo">
+            <img src="{{url_for('static', filename='images/cryptologo.png')}}" class="logo_img">
+        </div>
+        <ul class="nav_links">
+            <li><a href="">BITCOIN</a></li>
+            <li><a href="">ETHEREUM</a></li>
+            <li><a href="">LITECOIN</a></li>
+            <li><a href="">RIPPLE</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line_1"></div>
+            <div class="line_2"></div>
+            <div class="line_3"></div>
+        </div>
+    </nav>
+    <main class="main">
+        <div class="buttons_container">
+            <button onclick="{% block usd_button %}{% endblock %}" class="button btn_1"><li>USD</li></button>
+            <button onclick="{% block eur_button %}{% endblock %}" class="button btn_2"><li>EUR</li></button>
+            <button onclick="{% block brl_button %}{% endblock %}" class="button btn_3"><li>BRL</li></button>
+            <button onclick="{% block jpy_button %}{% endblock %}" class="button btn_4"><li>JPY</li></button>
+        </div>
+        {% block content%} {# Template inserted here #} {% endblock %}
+    </main>
+
+    <script src="{{url_for('static', filename='javascript/app.js')}}"></script>
+</body>

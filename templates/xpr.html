@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block usd_button %}xpr_usd(){% endblock %}
+{% block eur_button %}xpr_eur(){% endblock %}
+{% block brl_button %}xpr_brl(){% endblock %}
+{% block jpy_button %}xpr_jpy(){% endblock %}
+{% block content %}
+    <script>
+        function xpr_usd() {
+            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[12]['value']}} {{currency_data[12]['symbol2']}}";
+        }
+
+        function xpr_eur() {
+            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[14]['value']}} {{currency_data[14]['symbol2']}}";
+        }
+
+        function xpr_brl() {
+            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[13]['value']}} {{currency_data[13]['symbol2']}}";
+        }
+
+        function xpr_jpy() {
+            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[15]['value']}} {{currency_data[15]['symbol2']}}";
+        }
+
+    </script>
+
+    <div id="currency_response"> 1 BTC = </div>
+
+{% endblock %}

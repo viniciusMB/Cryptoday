@@ -6,23 +6,23 @@
 {% block content %}
     <script>
         function btc_usd() {
-            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[0]['value']}} {{currency_data[0]['symbol2']}}";
+            document.getElementById("currency_response").innerHTML = "<h1> 1 BTC = {{currency_data[0]['value']}} {{currency_data[0]['symbol2']}}</h1>";
         }
 
         function btc_eur() {
-            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[2]['value']}} {{currency_data[2]['symbol2']}}";
+            document.getElementById("currency_response").innerHTML = "<h1> 1 BTC = {{currency_data[2]['value']}} {{currency_data[2]['symbol2']}}</h1>";
         }
 
         function btc_brl() {
-            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[1]['value']}} {{currency_data[1]['symbol2']}}";
+            document.getElementById("currency_response").innerHTML = "<h1> 1 BTC = {{currency_data[1]['value']}} {{currency_data[1]['symbol2']}}</h1>";
         }
 
         function btc_jpy() {
-            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[3]['value']}} {{currency_data[3]['symbol2']}}";
+            document.getElementById("currency_response").innerHTML = "<h1> 1 BTC = {{currency_data[3]['value']}} {{currency_data[3]['symbol2']}}</h1>";
         }
 
     </script>
 
-    <div id="currency_response"> 1 BTC = </div>
+    <div id="currency_response" class="response"><h1> 1 BTC = </h1></div>
 
 {% endblock %}

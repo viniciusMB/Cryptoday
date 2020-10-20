@@ -105,11 +105,11 @@
 
 .buttons_container {
     text-align: center;
-    margin-top: 130px;
+    margin-top: 100px;
 }
 
 .button {
-    border: 1px solid #38508C;
+    border: 2px solid #38508C;
     background: #38508C;
     padding: 10px 20px;
     font-size: 20px;
@@ -125,4 +125,15 @@
 
 .button:hover {
     border: 2px solid #19CEDA;
+}
+
+.response {
+    margin-top: 150px;
+    text-align: center;
+}
+
+.response h1 {
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #19CEDA;
 }

@@ -16,10 +16,10 @@
             <img src="{{url_for('static', filename='images/cryptologo.png')}}" class="logo_img">
         </div>
         <ul class="nav_links">
-            <li><a href="">BITCOIN</a></li>
-            <li><a href="">ETHEREUM</a></li>
-            <li><a href="">LITECOIN</a></li>
-            <li><a href="">RIPPLE</a></li>
+            <li><a href="{{ url_for('btc')}}">BITCOIN</a></li>
+            <li><a href="{{ url_for('eth')}}">ETHEREUM</a></li>
+            <li><a href="{{ url_for('ltc')}}">LITECOIN</a></li>
+            <li><a href="{{ url_for('xpr')}}">RIPPLE</a></li>
         </ul>
         <div class="burger">
             <div class="line_1"></div>

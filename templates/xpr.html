@@ -6,23 +6,23 @@
 {% block content %}
     <script>
         function xpr_usd() {
-            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[12]['value']}} {{currency_data[12]['symbol2']}}";
+            document.getElementById("currency_response").innerHTML = "<h1> 1 XPR = {{currency_data[12]['value']}} {{currency_data[12]['symbol2']}}</h1>";
         }
 
         function xpr_eur() {
-            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[14]['value']}} {{currency_data[14]['symbol2']}}";
+            document.getElementById("currency_response").innerHTML = "<h1> 1 XPR = {{currency_data[14]['value']}} {{currency_data[14]['symbol2']}}</h1>";
         }
 
         function xpr_brl() {
-            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[13]['value']}} {{currency_data[13]['symbol2']}}";
+            document.getElementById("currency_response").innerHTML = "<h1> 1 XPR = {{currency_data[13]['value']}} {{currency_data[13]['symbol2']}}</h1>";
         }
 
         function xpr_jpy() {
-            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[15]['value']}} {{currency_data[15]['symbol2']}}";
+            document.getElementById("currency_response").innerHTML = "<h1> 1 XPR = {{currency_data[15]['value']}} {{currency_data[15]['symbol2']}}</h1>";
         }
 
     </script>
 
-    <div id="currency_response"> 1 BTC = </div>
+    <div id="currency_response" class="response"><h1> 1 XPR = </h1></div>
 
 {% endblock %}

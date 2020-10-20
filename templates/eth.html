@@ -6,23 +6,23 @@
 {% block content %}
     <script>
         function eth_usd() {
-            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[4]['value']}} {{currency_data[4]['symbol2']}}";
+            document.getElementById("currency_response").innerHTML = "<h1> 1 ETH = {{currency_data[4]['value']}} {{currency_data[4]['symbol2']}}</h1>";
         }
 
         function eth_eur() {
-            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[6]['value']}} {{currency_data[6]['symbol2']}}";
+            document.getElementById("currency_response").innerHTML = "<h1> 1 ETH = {{currency_data[6]['value']}} {{currency_data[6]['symbol2']}}</h1>";
         }
 
         function eth_brl() {
-            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[5]['value']}} {{currency_data[5]['symbol2']}}";
+            document.getElementById("currency_response").innerHTML = "<h1> 1 ETH = {{currency_data[5]['value']}} {{currency_data[5]['symbol2']}}</h1>";
         }
 
         function eth_jpy() {
-            document.getElementById("currency_response").innerHTML = "1 BTC = {{currency_data[7]['value']}} {{currency_data[7]['symbol2']}}";
+            document.getElementById("currency_response").innerHTML = "<h1> 1 ETH = {{currency_data[7]['value']}} {{currency_data[7]['symbol2']}}</h1>";
         }
 
     </script>
 
-    <div id="currency_response"> 1 BTC = </div>
+    <div id="currency_response" class="response"><h1> 1 ETH = </h1></div>
 
 {% endblock %}
